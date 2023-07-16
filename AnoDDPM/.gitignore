@@ -1,0 +1,13 @@
+library_NFBS
+DATASETS/Train
+DATASETS/Test
+model/diff-params-24-11-100epochs
+library_NFBS/NFBS_Dataset.tar
+.idea
+.DS_Store
+*.pyc
+*.zip
+diffusion-videos
+diffusion-training-images
+model
+temp.txt
