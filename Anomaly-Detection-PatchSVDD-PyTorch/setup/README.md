@@ -85,3 +85,5 @@ docker exec -it psvdd bash
 python inference.py --config_path=./configs/CYCLEGAN.yaml 
 python train.py --config_path=./configs/CYCLEGAN.yaml
 ```
+# Instructions for scp for the vm
+#scp -o ProxyJump=guest@xxx.xxx.xxx.x -rv G:\datasets\mvtec_anomaly_detection\ ubuntu@xxx.xx.xxx.xxx:/tmp/
