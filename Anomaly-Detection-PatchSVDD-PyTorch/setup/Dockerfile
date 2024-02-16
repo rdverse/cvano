@@ -1,6 +1,8 @@
 #FROM pytorch/pytorch:latest
-#FROM pytorch/pytorch:2.1.2-cuda11.8-cudnn8-devel
-FROM intel/intel-optimized-pytorch
+FROM pytorch/pytorch:2.1.2-cuda11.8-cudnn8-devel
+
+# for cpu only setup on vm or desktop
+#FROM intel/intel-optimized-pytorch
 WORKDIR /app
 
 COPY requirements.txt /app/

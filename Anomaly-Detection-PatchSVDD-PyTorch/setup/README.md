@@ -76,12 +76,17 @@ The genereated maps are saved in anomaly_maps/*obj* directory.
 ```
 docker build -t patchsvdd .
 
-docker run --gpus=all --shm-size=2gb -itd -v /home/rdverse/Dev/currentProjects/Anomaly-Detection-PatchSVDD-PyTorch:/ -v /mnt/g/datasets:/datasets --name psvdd patchsvdd
+#Stron 
+docker run --gpus=all --shm-size=2gb -itd -v /home/rdverse/Dev/currentProjects/cvano:/cvano -v /mnt/d/datasets:/datasets --name psvdd patchsvdd
+
+#ETron
+#docker run --gpus=all --shm-size=2gb -itd -v /home/rdverse/Dev/currentProjects/cvano/Anomaly-Detection-PatchSVDD-PyTorch:/ -v /mnt/g/datasets:/datasets --name psvdd patchsvdd
 
 docker exec -it psvdd bash
 ```
 
 ```
+
 python inference.py --config_path=./configs/CYCLEGAN.yaml 
 python train.py --config_path=./configs/CYCLEGAN.yaml
 ```
